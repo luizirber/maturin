@@ -1,0 +1,8 @@
+[workspace]
+members = [
+  "src/rust",
+]
+default-members = ["src/rust"]
+
+[workspace.package]
+version = "0.1.0"

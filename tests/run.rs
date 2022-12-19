@@ -106,6 +106,16 @@ fn develop_cffi_mixed() {
 }
 
 #[test]
+fn develop_cffi_mixed_workspace() {
+    handle_result(develop::test_develop(
+        "test-crates/cffi-mixed-workspace",
+        None,
+        "develop-cffi-mixed-workspace",
+        false,
+    ));
+}
+
+#[test]
 fn develop_uniffi_pure() {
     handle_result(develop::test_develop(
         "test-crates/uniffi-pure",
@@ -261,6 +271,17 @@ fn integration_cffi_mixed() {
         "test-crates/cffi-mixed",
         None,
         "integration-cffi-mixed",
+        false,
+        None,
+    ));
+}
+
+#[test]
+fn integration_cffi_mixed_workspace() {
+    handle_result(integration::test_integration(
+        "test-crates/cffi-mixed-workspace",
+        None,
+        "integration-cffi-mixed-workspace",
         false,
         None,
     ));
